@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD861F01141152F000AA10D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD861F00141152F000AA10D8 /* UIKit.framework */; };
+		DD861F03141152F000AA10D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD861F02141152F000AA10D8 /* Foundation.framework */; };
+		DD861F05141152F000AA10D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD861F04141152F000AA10D8 /* CoreGraphics.framework */; };
+		DD861F0B141152F000AA10D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD861F09141152F000AA10D8 /* InfoPlist.strings */; };
+		DD861F0D141152F000AA10D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD861F0C141152F000AA10D8 /* main.m */; };
+		DD861F11141152F000AA10D8 /* RMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD861F10141152F000AA10D8 /* RMAppDelegate.m */; };
+		DD861F14141152F000AA10D8 /* RMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD861F13141152F000AA10D8 /* RMViewController.m */; };
+		DD861F17141152F000AA10D8 /* RMViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD861F15141152F000AA10D8 /* RMViewController_iPhone.xib */; };
+		DD861F1A141152F000AA10D8 /* RMViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD861F18141152F000AA10D8 /* RMViewController_iPad.xib */; };
+		DDF7EC391412AF4B00E10E71 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF7EC381412AF4B00E10E71 /* Icon.png */; };
+		DDF7EC3B1412AFAD00E10E71 /* Icon-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF7EC3A1412AFAD00E10E71 /* Icon-2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD2F7C1D1412B5FE005A6AFB /* readme.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		DD861EFC141152F000AA10D8 /* vectorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vectorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD861F00141152F000AA10D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD861F02141152F000AA10D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD861F04141152F000AA10D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD861F08141152F000AA10D8 /* vectorRecorder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vectorRecorder-Info.plist"; sourceTree = "<group>"; };
+		DD861F0A141152F000AA10D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD861F0C141152F000AA10D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD861F0E141152F000AA10D8 /* vectorRecorder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vectorRecorder-Prefix.pch"; sourceTree = "<group>"; };
+		DD861F0F141152F000AA10D8 /* RMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMAppDelegate.h; sourceTree = "<group>"; };
+		DD861F10141152F000AA10D8 /* RMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMAppDelegate.m; sourceTree = "<group>"; };
+		DD861F12141152F000AA10D8 /* RMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMViewController.h; sourceTree = "<group>"; };
+		DD861F13141152F000AA10D8 /* RMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMViewController.m; sourceTree = "<group>"; };
+		DD861F16141152F000AA10D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RMViewController_iPhone.xib; sourceTree = "<group>"; };
+		DD861F19141152F000AA10D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RMViewController_iPad.xib; sourceTree = "<group>"; };
+		DDF7EC381412AF4B00E10E71 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DDF7EC3A1412AFAD00E10E71 /* Icon-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD861EF9141152F000AA10D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD861F01141152F000AA10D8 /* UIKit.framework in Frameworks */,
+				DD861F03141152F000AA10D8 /* Foundation.framework in Frameworks */,
+				DD861F05141152F000AA10D8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD861EF1141152F000AA10D8 = {
+			isa = PBXGroup;
+			children = (
+				DD861F06141152F000AA10D8 /* vectorRecorder */,
+				DDF7EC381412AF4B00E10E71 /* Icon.png */,
+				DDF7EC3A1412AFAD00E10E71 /* Icon-2x.png */,
+				DD2F7C1D1412B5FE005A6AFB /* readme.txt */,
+				DD861EFF141152F000AA10D8 /* Frameworks */,
+				DD861EFD141152F000AA10D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD861EFD141152F000AA10D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD861EFC141152F000AA10D8 /* vectorRecorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD861EFF141152F000AA10D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD861F00141152F000AA10D8 /* UIKit.framework */,
+				DD861F02141152F000AA10D8 /* Foundation.framework */,
+				DD861F04141152F000AA10D8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD861F06141152F000AA10D8 /* vectorRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				DD861F0F141152F000AA10D8 /* RMAppDelegate.h */,
+				DD861F10141152F000AA10D8 /* RMAppDelegate.m */,
+				DD861F12141152F000AA10D8 /* RMViewController.h */,
+				DD861F13141152F000AA10D8 /* RMViewController.m */,
+				DD861F15141152F000AA10D8 /* RMViewController_iPhone.xib */,
+				DD861F18141152F000AA10D8 /* RMViewController_iPad.xib */,
+				DD861F07141152F000AA10D8 /* Supporting Files */,
+			);
+			path = vectorRecorder;
+			sourceTree = "<group>";
+		};
+		DD861F07141152F000AA10D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD861F08141152F000AA10D8 /* vectorRecorder-Info.plist */,
+				DD861F09141152F000AA10D8 /* InfoPlist.strings */,
+				DD861F0C141152F000AA10D8 /* main.m */,
+				DD861F0E141152F000AA10D8 /* vectorRecorder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD861EFB141152F000AA10D8 /* vectorRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD861F1D141152F000AA10D8 /* Build configuration list for PBXNativeTarget "vectorRecorder" */;
+			buildPhases = (
+				DD861EF8141152F000AA10D8 /* Sources */,
+				DD861EF9141152F000AA10D8 /* Frameworks */,
+				DD861EFA141152F000AA10D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vectorRecorder;
+			productName = vectorRecorder;
+			productReference = DD861EFC141152F000AA10D8 /* vectorRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD861EF3141152F000AA10D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = RogueMinds.net;
+			};
+			buildConfigurationList = DD861EF6141152F000AA10D8 /* Build configuration list for PBXProject "vectorRecorder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD861EF1141152F000AA10D8;
+			productRefGroup = DD861EFD141152F000AA10D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD861EFB141152F000AA10D8 /* vectorRecorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD861EFA141152F000AA10D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD861F0B141152F000AA10D8 /* InfoPlist.strings in Resources */,
+				DD861F17141152F000AA10D8 /* RMViewController_iPhone.xib in Resources */,
+				DD861F1A141152F000AA10D8 /* RMViewController_iPad.xib in Resources */,
+				DDF7EC391412AF4B00E10E71 /* Icon.png in Resources */,
+				DDF7EC3B1412AFAD00E10E71 /* Icon-2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD861EF8141152F000AA10D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD861F0D141152F000AA10D8 /* main.m in Sources */,
+				DD861F11141152F000AA10D8 /* RMAppDelegate.m in Sources */,
+				DD861F14141152F000AA10D8 /* RMViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD861F09141152F000AA10D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD861F0A141152F000AA10D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD861F15141152F000AA10D8 /* RMViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD861F16141152F000AA10D8 /* en */,
+			);
+			name = RMViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		DD861F18141152F000AA10D8 /* RMViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD861F19141152F000AA10D8 /* en */,
+			);
+			name = RMViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD861F1B141152F000AA10D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD861F1C141152F000AA10D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD861F1E141152F000AA10D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vectorRecorder/vectorRecorder-Prefix.pch";
+				INFOPLIST_FILE = "vectorRecorder/vectorRecorder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD861F1F141152F000AA10D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vectorRecorder/vectorRecorder-Prefix.pch";
+				INFOPLIST_FILE = "vectorRecorder/vectorRecorder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD861EF6141152F000AA10D8 /* Build configuration list for PBXProject "vectorRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD861F1B141152F000AA10D8 /* Debug */,
+				DD861F1C141152F000AA10D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD861F1D141152F000AA10D8 /* Build configuration list for PBXNativeTarget "vectorRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD861F1E141152F000AA10D8 /* Debug */,
+				DD861F1F141152F000AA10D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD861EF3141152F000AA10D8 /* Project object */;
+}
