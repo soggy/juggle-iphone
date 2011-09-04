@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD071D671412EFD000247C08 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D661412EFD000247C08 /* AsyncUdpSocket.m */; };
+		DD071D6B1412F36D00247C08 /* TattleTale.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D6A1412F36D00247C08 /* TattleTale.m */; };
+		DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = DD1F3C461413E91A0039A528 /* Entitlements.entitlements */; };
+		DD3ACE7E1412D9480097BAF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7D1412D9480097BAF8 /* UIKit.framework */; };
+		DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7F1412D9480097BAF8 /* Foundation.framework */; };
+		DD3ACE821412D9480097BAF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE811412D9480097BAF8 /* CoreGraphics.framework */; };
+		DD3ACE881412D9480097BAF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACE861412D9480097BAF8 /* InfoPlist.strings */; };
+		DD3ACE8A1412D9480097BAF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3ACE891412D9480097BAF8 /* main.m */; };
+		DD3ACE8E1412D9480097BAF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */; };
+		DD3ACE911412D9480097BAF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3ACE901412D9480097BAF8 /* ViewController.m */; };
+		DD3ACE941412D9480097BAF8 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */; };
+		DD3ACE971412D9480097BAF8 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */; };
+		DD3ACEA31412DFC80097BAF8 /* Icon-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */; };
+		DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA21412DFC80097BAF8 /* Icon.png */; };
+		DDA264F9141324E000C57FC2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA264F8141324E000C57FC2 /* GameKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD071D651412EFD000247C08 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		DD071D661412EFD000247C08 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		DD071D691412F36D00247C08 /* TattleTale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattleTale.h; sourceTree = "<group>"; };
+		DD071D6A1412F36D00247C08 /* TattleTale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattleTale.m; sourceTree = "<group>"; };
+		DD1F3C461413E91A0039A528 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		DD3ACE791412D9480097BAF8 /* Juggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD3ACE7D1412D9480097BAF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD3ACE7F1412D9480097BAF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD3ACE811412D9480097BAF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DD3ACE851412D9480097BAF8 /* Juggle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Juggle-Info.plist"; sourceTree = "<group>"; };
+		DD3ACE871412D9480097BAF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD3ACE891412D9480097BAF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD3ACE8B1412D9480097BAF8 /* Juggle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Juggle-Prefix.pch"; sourceTree = "<group>"; };
+		DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DD3ACE8F1412D9480097BAF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DD3ACE901412D9480097BAF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DD3ACE931412D9480097BAF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		DD3ACE961412D9480097BAF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-2x.png"; sourceTree = "<group>"; };
+		DD3ACEA21412DFC80097BAF8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DDA264F8141324E000C57FC2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD3ACE761412D9480097BAF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3ACE7E1412D9480097BAF8 /* UIKit.framework in Frameworks */,
+				DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */,
+				DD3ACE821412D9480097BAF8 /* CoreGraphics.framework in Frameworks */,
+				DDA264F9141324E000C57FC2 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD3ACE6E1412D9480097BAF8 = {
+			isa = PBXGroup;
+			children = (
+				DD3ACE831412D9480097BAF8 /* Juggle */,
+				DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */,
+				DD3ACEA21412DFC80097BAF8 /* Icon.png */,
+				DD3ACE7C1412D9480097BAF8 /* Frameworks */,
+				DD3ACE7A1412D9480097BAF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD3ACE7A1412D9480097BAF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ACE791412D9480097BAF8 /* Juggle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD3ACE7C1412D9480097BAF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ACE7D1412D9480097BAF8 /* UIKit.framework */,
+				DD3ACE7F1412D9480097BAF8 /* Foundation.framework */,
+				DD3ACE811412D9480097BAF8 /* CoreGraphics.framework */,
+				DDA264F8141324E000C57FC2 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD3ACE831412D9480097BAF8 /* Juggle */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */,
+				DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */,
+				DD3ACE8F1412D9480097BAF8 /* ViewController.h */,
+				DD3ACE901412D9480097BAF8 /* ViewController.m */,
+				DD071D691412F36D00247C08 /* TattleTale.h */,
+				DD071D6A1412F36D00247C08 /* TattleTale.m */,
+				DD071D651412EFD000247C08 /* AsyncUdpSocket.h */,
+				DD071D661412EFD000247C08 /* AsyncUdpSocket.m */,
+				DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */,
+				DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */,
+				DD3ACE841412D9480097BAF8 /* Supporting Files */,
+				DD1F3C461413E91A0039A528 /* Entitlements.entitlements */,
+			);
+			path = Juggle;
+			sourceTree = "<group>";
+		};
+		DD3ACE841412D9480097BAF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ACE851412D9480097BAF8 /* Juggle-Info.plist */,
+				DD3ACE861412D9480097BAF8 /* InfoPlist.strings */,
+				DD3ACE891412D9480097BAF8 /* main.m */,
+				DD3ACE8B1412D9480097BAF8 /* Juggle-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD3ACE781412D9480097BAF8 /* Juggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD3ACE9A1412D9480097BAF8 /* Build configuration list for PBXNativeTarget "Juggle" */;
+			buildPhases = (
+				DD3ACE751412D9480097BAF8 /* Sources */,
+				DD3ACE761412D9480097BAF8 /* Frameworks */,
+				DD3ACE771412D9480097BAF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Juggle;
+			productName = Juggle;
+			productReference = DD3ACE791412D9480097BAF8 /* Juggle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD3ACE701412D9480097BAF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = RogueMinds.net;
+			};
+			buildConfigurationList = DD3ACE731412D9480097BAF8 /* Build configuration list for PBXProject "Juggle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD3ACE6E1412D9480097BAF8;
+			productRefGroup = DD3ACE7A1412D9480097BAF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD3ACE781412D9480097BAF8 /* Juggle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD3ACE771412D9480097BAF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3ACE881412D9480097BAF8 /* InfoPlist.strings in Resources */,
+				DD3ACE941412D9480097BAF8 /* ViewController_iPhone.xib in Resources */,
+				DD3ACE971412D9480097BAF8 /* ViewController_iPad.xib in Resources */,
+				DD3ACEA31412DFC80097BAF8 /* Icon-2x.png in Resources */,
+				DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */,
+				DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD3ACE751412D9480097BAF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD3ACE8A1412D9480097BAF8 /* main.m in Sources */,
+				DD3ACE8E1412D9480097BAF8 /* AppDelegate.m in Sources */,
+				DD3ACE911412D9480097BAF8 /* ViewController.m in Sources */,
+				DD071D671412EFD000247C08 /* AsyncUdpSocket.m in Sources */,
+				DD071D6B1412F36D00247C08 /* TattleTale.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD3ACE861412D9480097BAF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3ACE871412D9480097BAF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3ACE931412D9480097BAF8 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3ACE961412D9480097BAF8 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD3ACE981412D9480097BAF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALTERNATE_MODE = Entitlements.entitlements;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD3ACE991412D9480097BAF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALTERNATE_MODE = Entitlements.entitlements;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD3ACE9B1412D9480097BAF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
+				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD3ACE9C1412D9480097BAF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
+				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DD81EA6F1413FF6200BF28F8 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALTERNATE_MODE = Entitlements.entitlements;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		DD81EA701413FF6200BF28F8 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
+				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD3ACE731412D9480097BAF8 /* Build configuration list for PBXProject "Juggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3ACE981412D9480097BAF8 /* Debug */,
+				DD3ACE991412D9480097BAF8 /* Release */,
+				DD81EA6F1413FF6200BF28F8 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD3ACE9A1412D9480097BAF8 /* Build configuration list for PBXNativeTarget "Juggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3ACE9B1412D9480097BAF8 /* Debug */,
+				DD3ACE9C1412D9480097BAF8 /* Release */,
+				DD81EA701413FF6200BF28F8 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD3ACE701412D9480097BAF8 /* Project object */;
+}
