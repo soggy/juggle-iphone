@@ -10,10 +10,10 @@
 
 @class ViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : NSObject <UIApplicationDelegate>
 
-@property (retain, nonatomic) UIWindow *window;
+@property (retain, nonatomic) IBOutlet UIWindow *window;
 
-@property (retain, nonatomic) ViewController *viewController;
+@property (retain, nonatomic) IBOutlet ViewController *viewController;
 
 @end

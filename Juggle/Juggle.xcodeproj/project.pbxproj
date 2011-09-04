@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DD071D671412EFD000247C08 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D661412EFD000247C08 /* AsyncUdpSocket.m */; };
 		DD071D6B1412F36D00247C08 /* TattleTale.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D6A1412F36D00247C08 /* TattleTale.m */; };
+		DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */; };
 		DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = DD1F3C461413E91A0039A528 /* Entitlements.entitlements */; };
 		DD3ACE7E1412D9480097BAF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7D1412D9480097BAF8 /* UIKit.framework */; };
 		DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7F1412D9480097BAF8 /* Foundation.framework */; };
@@ -29,6 +30,7 @@
 		DD071D661412EFD000247C08 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 		DD071D691412F36D00247C08 /* TattleTale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattleTale.h; sourceTree = "<group>"; };
 		DD071D6A1412F36D00247C08 /* TattleTale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattleTale.m; sourceTree = "<group>"; };
+		DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		DD1F3C461413E91A0039A528 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		DD3ACE791412D9480097BAF8 /* Juggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3ACE7D1412D9480097BAF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +107,7 @@
 				DD071D6A1412F36D00247C08 /* TattleTale.m */,
 				DD071D651412EFD000247C08 /* AsyncUdpSocket.h */,
 				DD071D661412EFD000247C08 /* AsyncUdpSocket.m */,
+				DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */,
 				DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */,
 				DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */,
 				DD3ACE841412D9480097BAF8 /* Supporting Files */,
@@ -181,6 +184,7 @@
 				DD3ACEA31412DFC80097BAF8 /* Icon-2x.png in Resources */,
 				DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */,
 				DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */,
+				DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
