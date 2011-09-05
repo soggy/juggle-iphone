@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "AsyncUdpSocket.h"
+#import <GameKit/GameKit.h>
 
 
-@interface TattleTale : NSObject <UIAccelerometerDelegate, CLLocationManagerDelegate>
+@interface TattleTale : NSObject <UIAccelerometerDelegate, CLLocationManagerDelegate, GKPeerPickerControllerDelegate, GKSessionDelegate>
 {
     NSString *whichHand;
     NSString *serverAddress;
     UIAccelerometer *accelerometer;
+    GKSession *gameKitSession;
+    NSString *gameKitPeerId;
     AsyncUdpSocket *socket;
     CLLocationManager *locationManager;
     CLHeadingComponentValue lastOrientationX;
@@ -24,6 +27,10 @@
 }
 
 -(TattleTale *)initWithHand:(NSString *)hand forServer:(NSString *)serverName;
+-(TattleTale *)initForGameKitWithHand:(NSString *)hand;
+
+- (void)invalidateSession:(GKSession *)session;
+
 -(void)cancel;
 
 @end

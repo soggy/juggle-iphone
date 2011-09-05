@@ -158,20 +158,23 @@
     {
         hand = @"right";
     } else {
-        connectMessage.text = @"That wasn't a button I recognize";
+        connectMessage.text = @"That wasn't a button I recognize.";
         return;
+    }
+
+    if (talker != nil) {
+        [talker cancel];
+        [talker release];
     }
 
     if (useBluetooth == YES)
     {
         connectMessage.text = [NSString stringWithFormat:@"Pairing as\n%@ hand...", hand];
-    } else {
+        talker = [[[TattleTale alloc] initForGameKitWithHand:hand] retain];
+    } else 
+    {
         connectMessage.text = [NSString stringWithFormat: @"Connecting to \n%@\nas %@ hand...", serverAddress.text, hand];
         connectMessage.text = [NSString stringWithFormat:@"Sending data to\n%@...\nTap 'Cancel' to stop", serverAddress.text];
-        if (talker != nil) {
-            [talker cancel];
-            [talker release];
-        }
         talker = [[[TattleTale alloc] initWithHand:hand forServer:serverAddress.text] retain];
     }
     cancelButton.hidden = NO;
@@ -198,7 +201,11 @@
     [leftButton release];
     [cancelButton release];
     [rightButton release];
-    [talker release];
+    if (talker != nil)
+    {
+        [talker cancel];
+        [talker release];
+    }
     [serverLabel release];
     [connectionMethodSwitch release];
     [super dealloc];

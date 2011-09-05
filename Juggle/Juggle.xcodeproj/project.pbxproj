@@ -24,6 +24,8 @@
 		DD3ACEA31412DFC80097BAF8 /* Icon-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */; };
 		DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA21412DFC80097BAF8 /* Icon.png */; };
 		DDA264F9141324E000C57FC2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA264F8141324E000C57FC2 /* GameKit.framework */; };
+		DDF1630F141478B700D9C5C6 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF1630D141478B700D9C5C6 /* default.png */; };
+		DDF16310141478B700D9C5C6 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF1630E141478B700D9C5C6 /* default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-2x.png"; sourceTree = "<group>"; };
 		DD3ACEA21412DFC80097BAF8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		DDA264F8141324E000C57FC2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		DDF1630D141478B700D9C5C6 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = SOURCE_ROOT; };
+		DDF1630E141478B700D9C5C6 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		DD3ACE831412D9480097BAF8 /* Juggle */ = {
 			isa = PBXGroup;
 			children = (
+				DDF1630D141478B700D9C5C6 /* default.png */,
+				DDF1630E141478B700D9C5C6 /* default@2x.png */,
 				DD07D6741414279400CEFD10 /* Juggle.entitlements */,
 				DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */,
 				DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */,
@@ -191,6 +197,8 @@
 				DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */,
 				DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */,
 				DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */,
+				DDF1630F141478B700D9C5C6 /* default.png in Resources */,
+				DDF16310141478B700D9C5C6 /* default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +303,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -308,7 +316,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -343,7 +351,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
