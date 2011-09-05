@@ -23,6 +23,9 @@
 		DD3ACE971412D9480097BAF8 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */; };
 		DD3ACEA31412DFC80097BAF8 /* Icon-2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */; };
 		DD3ACEA41412DFC80097BAF8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DD3ACEA21412DFC80097BAF8 /* Icon.png */; };
+		DD480D93141483B50063A54C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DD480D92141483B50063A54C /* Icon-72.png */; };
+		DD480D95141483E00063A54C /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD480D94141483E00063A54C /* MainWindow_iPad.xib */; };
+		DD480D991414874D0063A54C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DD480D981414874C0063A54C /* Default-Portrait~ipad.png */; };
 		DDA264F9141324E000C57FC2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA264F8141324E000C57FC2 /* GameKit.framework */; };
 		DDF1630F141478B700D9C5C6 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF1630D141478B700D9C5C6 /* default.png */; };
 		DDF16310141478B700D9C5C6 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF1630E141478B700D9C5C6 /* default@2x.png */; };
@@ -53,6 +56,9 @@
 		DD3ACE961412D9480097BAF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-2x.png"; sourceTree = "<group>"; };
 		DD3ACEA21412DFC80097BAF8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DD480D92141483B50063A54C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		DD480D94141483E00063A54C /* MainWindow_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
+		DD480D981414874C0063A54C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		DDA264F8141324E000C57FC2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DDF1630D141478B700D9C5C6 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = SOURCE_ROOT; };
 		DDF1630E141478B700D9C5C6 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -80,6 +86,7 @@
 				DD3ACE831412D9480097BAF8 /* Juggle */,
 				DD3ACEA11412DFC80097BAF8 /* Icon-2x.png */,
 				DD3ACEA21412DFC80097BAF8 /* Icon.png */,
+				DD480D92141483B50063A54C /* Icon-72.png */,
 				DD3ACE7C1412D9480097BAF8 /* Frameworks */,
 				DD3ACE7A1412D9480097BAF8 /* Products */,
 			);
@@ -110,6 +117,7 @@
 			children = (
 				DDF1630D141478B700D9C5C6 /* default.png */,
 				DDF1630E141478B700D9C5C6 /* default@2x.png */,
+				DD480D981414874C0063A54C /* Default-Portrait~ipad.png */,
 				DD07D6741414279400CEFD10 /* Juggle.entitlements */,
 				DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */,
 				DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */,
@@ -120,6 +128,7 @@
 				DD071D651412EFD000247C08 /* AsyncUdpSocket.h */,
 				DD071D661412EFD000247C08 /* AsyncUdpSocket.m */,
 				DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */,
+				DD480D94141483E00063A54C /* MainWindow_iPad.xib */,
 				DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */,
 				DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */,
 				DD3ACE841412D9480097BAF8 /* Supporting Files */,
@@ -199,6 +208,9 @@
 				DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */,
 				DDF1630F141478B700D9C5C6 /* default.png in Resources */,
 				DDF16310141478B700D9C5C6 /* default@2x.png in Resources */,
+				DD480D93141483B50063A54C /* Icon-72.png in Resources */,
+				DD480D95141483E00063A54C /* MainWindow_iPad.xib in Resources */,
+				DD480D991414874D0063A54C /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +266,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Hendrix (A478CA566X)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -269,6 +282,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "963C5697-C350-4235-8DDD-FE8594CA02E4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -281,7 +296,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Hendrix (A478CA566X)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -290,6 +306,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "963C5697-C350-4235-8DDD-FE8594CA02E4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -329,7 +347,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Hendrix (A478CA566X)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -338,6 +357,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "963C5697-C350-4235-8DDD-FE8594CA02E4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
