@@ -175,6 +175,116 @@
 	}
 }
 
+#pragma mark Data Send/Receive Methods
+
+/*
+ * Getting a data packet. This is the data receive handler method expected by the GKSession. 
+ * We set ourselves as the receive data handler in the -peerPickerController:didConnectPeer:toSession: method.
+ */
+- (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context { 
+//	static int lastPacketTime = -1;
+//	unsigned char *incomingPacket = (unsigned char *)[data bytes];
+//	int *pIntData = (int *)&incomingPacket[0];
+//	//
+//	// developer  check the network time and make sure packers are in order
+//	//
+//	int packetTime = pIntData[0];
+//	int packetID = pIntData[1];
+//	if(packetTime < lastPacketTime && packetID != NETWORK_COINTOSS) {
+//		return;	
+//	}
+//	
+//	lastPacketTime = packetTime;
+//	switch( packetID ) {
+//		case NETWORK_COINTOSS:
+//        {
+//            // coin toss to determine roles of the two players
+//            int coinToss = pIntData[2];
+//            // if other player's coin is higher than ours then that player is the server
+//            if(coinToss > gameUniqueID) {
+//                self.peerStatus = kClient;
+//            }
+//            
+//            // notify user of tank color
+//            self.gameLabel.text = (self.peerStatus == kServer) ? kBlueLabel : kRedLabel; // server is the blue tank, client is red
+//            self.gameLabel.hidden = NO;
+//            // after 1 second fire method to hide the label
+//            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(hideGameLabel:) userInfo:nil repeats:NO];
+//        }
+//			break;
+//		case NETWORK_MOVE_EVENT:
+//        {
+//            // received move event from other player, update other player's position/destination info
+//            tankInfo *ts = (tankInfo *)&incomingPacket[8];
+//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+//            tankInfo *ds = &tankStats[peer];
+//            ds->tankDestination = ts->tankDestination;
+//            ds->tankDirection = ts->tankDirection;
+//        }
+//			break;
+//		case NETWORK_FIRE_EVENT:
+//        {
+//            // received a missile fire event from other player, update other player's firing status
+//            tankInfo *ts = (tankInfo *)&incomingPacket[8];
+//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+//            tankInfo *ds = &tankStats[peer];
+//            ds->tankMissile = ts->tankMissile;
+//            ds->tankMissilePosition = ts->tankMissilePosition;
+//            ds->tankMissileDirection = ts->tankMissileDirection;
+//        }
+//			break;
+//		case NETWORK_HEARTBEAT:
+//        {
+//            // Received heartbeat data with other player's position, destination, and firing status.
+//            
+//            // update the other player's info from the heartbeat
+//            tankInfo *ts = (tankInfo *)&incomingPacket[8];		// tank data as seen on other client
+//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+//            tankInfo *ds = &tankStats[peer];					// same tank, as we see it on this client
+//            memcpy( ds, ts, sizeof(tankInfo) );
+//            
+//            // update heartbeat timestamp
+//            self.lastHeartbeatDate = [NSDate date];
+//            
+//            // if we were trying to reconnect, set the state back to multiplayer as the peer is back
+//            if(self.gameState == kStateMultiplayerReconnect) {
+//                if(self.connectionAlert && self.connectionAlert.visible) {
+//                    [self.connectionAlert dismissWithClickedButtonIndex:-1 animated:YES];
+//                }
+//                self.gameState = kStateMultiplayer;
+//            }
+//        }
+//			break;
+//		default:
+//			// error
+//			break;
+//	}
+}
+
+- (void)sendNetworkPacket:(GKSession *)session packetID:(int)packetID withData:(void *)data ofLength:(int)length reliable:(BOOL)howtosend 
+{
+//	// the packet we'll send is resued
+//	static unsigned char networkPacket[kMaxTankPacketSize];
+//	const unsigned int packetHeaderSize = 2 * sizeof(int); // we have two "ints" for our header
+//	
+//	if(length < (kMaxTankPacketSize - packetHeaderSize)) { // our networkPacket buffer size minus the size of the header info
+//		int *pIntData = (int *)&networkPacket[0];
+//		// header info
+//		pIntData[0] = gamePacketNumber++;
+//		pIntData[1] = packetID;
+//		// copy data in after the header
+//		memcpy( &networkPacket[packetHeaderSize], data, length ); 
+//		
+//		NSData *packet = [NSData dataWithBytes: networkPacket length: (length+8)];
+//		if(howtosend == YES) { 
+//			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataReliable error:nil];
+//		} else {
+//			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataUnreliable error:nil];
+//		}
+//	}
+}
+
+
 #pragma mark - GKSessionDelegate Methods
 
 // we've gotten a state change in the session

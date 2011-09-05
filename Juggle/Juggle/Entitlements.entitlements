@@ -4,5 +4,7 @@
 <dict>
 	<key>get-task-allow</key>
 	<true/>
+	<key>keychain-access-groups</key>
+	<array/>
 </dict>
 </plist>
