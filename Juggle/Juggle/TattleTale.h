@@ -7,12 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "AsyncUdpSocket.h"
 
-@interface TattleTale : NSObject <UIAccelerometerDelegate>
+
+@interface TattleTale : NSObject <UIAccelerometerDelegate, CLLocationManagerDelegate>
 {
     NSString *whichHand;
     NSString *serverAddress;
     UIAccelerometer *accelerometer;
+    AsyncUdpSocket *socket;
+    CLLocationManager *locationManager;
+    CLHeadingComponentValue lastOrientationX;
+    CLHeadingComponentValue lastOrientationY;
+    CLHeadingComponentValue lastOrientationZ;
 }
 
 -(TattleTale *)initWithHand:(NSString *)hand forServer:(NSString *)serverName;

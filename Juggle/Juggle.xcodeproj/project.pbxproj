@@ -10,6 +10,7 @@
 		DD071D671412EFD000247C08 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D661412EFD000247C08 /* AsyncUdpSocket.m */; };
 		DD071D6B1412F36D00247C08 /* TattleTale.m in Sources */ = {isa = PBXBuildFile; fileRef = DD071D6A1412F36D00247C08 /* TattleTale.m */; };
 		DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */; };
+		DD07D67B141445BB00CEFD10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD07D67A141445BB00CEFD10 /* CoreLocation.framework */; };
 		DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = DD1F3C461413E91A0039A528 /* Entitlements.entitlements */; };
 		DD3ACE7E1412D9480097BAF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7D1412D9480097BAF8 /* UIKit.framework */; };
 		DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7F1412D9480097BAF8 /* Foundation.framework */; };
@@ -31,6 +32,8 @@
 		DD071D691412F36D00247C08 /* TattleTale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattleTale.h; sourceTree = "<group>"; };
 		DD071D6A1412F36D00247C08 /* TattleTale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattleTale.m; sourceTree = "<group>"; };
 		DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		DD07D6741414279400CEFD10 /* Juggle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Juggle.entitlements; sourceTree = "<group>"; };
+		DD07D67A141445BB00CEFD10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD1F3C461413E91A0039A528 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		DD3ACE791412D9480097BAF8 /* Juggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3ACE7D1412D9480097BAF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -60,6 +63,7 @@
 				DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */,
 				DD3ACE821412D9480097BAF8 /* CoreGraphics.framework in Frameworks */,
 				DDA264F9141324E000C57FC2 /* GameKit.framework in Frameworks */,
+				DD07D67B141445BB00CEFD10 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 		DD3ACE7C1412D9480097BAF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD07D67A141445BB00CEFD10 /* CoreLocation.framework */,
 				DD3ACE7D1412D9480097BAF8 /* UIKit.framework */,
 				DD3ACE7F1412D9480097BAF8 /* Foundation.framework */,
 				DD3ACE811412D9480097BAF8 /* CoreGraphics.framework */,
@@ -99,6 +104,7 @@
 		DD3ACE831412D9480097BAF8 /* Juggle */ = {
 			isa = PBXGroup;
 			children = (
+				DD07D6741414279400CEFD10 /* Juggle.entitlements */,
 				DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */,
 				DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */,
 				DD3ACE8F1412D9480097BAF8 /* ViewController.h */,
@@ -285,6 +291,7 @@
 		DD3ACE9B1412D9480097BAF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Juggle/Entitlements.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
@@ -297,6 +304,7 @@
 		DD3ACE9C1412D9480097BAF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Juggle/Entitlements.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";
@@ -331,6 +339,7 @@
 		DD81EA701413FF6200BF28F8 /* Ad Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Juggle/Entitlements.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Juggle/Juggle-Prefix.pch";
 				INFOPLIST_FILE = "Juggle/Juggle-Info.plist";

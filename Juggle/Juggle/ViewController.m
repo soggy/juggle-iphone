@@ -77,16 +77,12 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-//    // Return YES for supported orientations
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-//        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-//    } else {
-//        return YES;
-//    }
-
-    //  It'd be just too darn distracting to have the UI rotate as you move the phone. Just say no...
-    
-    return YES;
+    // Return YES for supported orientations
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    } else {
+        return YES;
+    }
 }
 
 
@@ -181,6 +177,7 @@
     cancelButton.hidden = NO;
     leftButton.hidden = YES;
     rightButton.hidden = YES;
+    connectAsLabel.hidden = YES;
 }
 
 - (IBAction)stopSending:(id)sender {
