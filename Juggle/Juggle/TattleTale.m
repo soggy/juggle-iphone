@@ -12,11 +12,20 @@
 
 @implementation TattleTale
 
--(TattleTale *)initForGameKitWithHand:(NSString *)hand
+-(TattleTale *)initForGameKitWithHand:(NSString *)hand localDisplayField:(UILabel *)local remoteDisplayField:(UILabel *)remote
 {
     self = [super init];
     if (self != nil) {
         whichHand = [hand retain];
+        
+        if (localDisplayText != nil)
+            [localDisplayText release];
+        localDisplayText = [local retain];
+        
+        if (remoteDisplayText != nil)
+            [remoteDisplayText release];
+        remoteDisplayText = [remote retain];
+        
         socket = nil;
         
         GKPeerPickerController *picker;
@@ -29,17 +38,26 @@
 }
 
 
--(TattleTale *)initWithHand:(NSString *)hand forServer:(NSString *)serverName
+-(TattleTale *)initWithHand:(NSString *)hand forServer:(NSString *)serverName localDisplayField:(UILabel *)local remoteDisplayField:(UILabel *)remote
 {
     self = [super init];
     if (self != nil) {
         whichHand = [hand retain];
+        
+        if (localDisplayText != nil)
+            [localDisplayText release];
+        localDisplayText = [local retain];
+        
+        if (remoteDisplayText != nil)
+            [remoteDisplayText release];
+        remoteDisplayText = [remote retain];
+        
         serverAddress = [serverName retain];
         accelerometer = [[UIAccelerometer sharedAccelerometer] retain];
         accelerometer.updateInterval = 1.0/20.0;
         accelerometer.delegate = self;
         socket = [[[AsyncUdpSocket alloc] init] retain];
-
+        
         // setup the location manager
         locationManager = [[[CLLocationManager alloc] init] retain];
         
@@ -70,22 +88,24 @@
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
     NSString *jsonDataFormat = \
-@"{\n\
+    @"{\n\
     \"type\":\"sensor\",\n\
     \"sensor_data\":\n\
     {\n\
-      \"hand\":\"%@\",\n\
-      \"x\":\"%6.4f\",\n\
-      \"y\":\"%6.4f\",\n\
-      \"z\":\"%6.4f\",\n\
-      \"azimuth\":\"%6.4f\",\n\
-      \"pitch\":\"%6.4f\",\n\
-      \"roll\":\"%6.4f\"\n\
+    \"hand\":\"%@\",\n\
+    \"x\":\"%6.4f\",\n\
+    \"y\":\"%6.4f\",\n\
+    \"z\":\"%6.4f\",\n\
+    \"azimuth\":\"%6.4f\",\n\
+    \"pitch\":\"%6.4f\",\n\
+    \"roll\":\"%6.4f\"\n\
     }\n\
-}";
-
+    }";
+    
     NSString *jsonData = [NSString stringWithFormat:jsonDataFormat, whichHand, acceleration.x, acceleration.y, acceleration.z, lastOrientationX, lastOrientationY, lastOrientationZ];
-
+    
+    if (localDisplayText != nil)
+        localDisplayText.text = [NSString stringWithFormat:@"Accel - X:%4.2f Y:4.2f Z:4.2f\nAzi:%4.2f Pitch:%4.2f Roll:%4.2f", acceleration.x, acceleration.y, acceleration.z, lastOrientationX, lastOrientationY, lastOrientationZ];
     [socket sendData:[jsonData dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] toHost:serverAddress port:12345 withTimeout:-1 tag:1];
 }
 
@@ -131,7 +151,7 @@
 	}
 	
 	// go back to start mode
-//	self.gameState = kStateStartGame;
+    //	self.gameState = kStateStartGame;
 } 
 
 //
@@ -157,7 +177,7 @@
 	[picker autorelease];
 	
 	// Start Multiplayer game by entering a cointoss state to determine who is server/client.
-//	self.gameState = kStateMultiplayerCointoss;
+    //	self.gameState = kStateMultiplayerCointoss;
 } 
 
 #pragma mark -
@@ -182,106 +202,106 @@
  * We set ourselves as the receive data handler in the -peerPickerController:didConnectPeer:toSession: method.
  */
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context { 
-//	static int lastPacketTime = -1;
-//	unsigned char *incomingPacket = (unsigned char *)[data bytes];
-//	int *pIntData = (int *)&incomingPacket[0];
-//	//
-//	// developer  check the network time and make sure packers are in order
-//	//
-//	int packetTime = pIntData[0];
-//	int packetID = pIntData[1];
-//	if(packetTime < lastPacketTime && packetID != NETWORK_COINTOSS) {
-//		return;	
-//	}
-//	
-//	lastPacketTime = packetTime;
-//	switch( packetID ) {
-//		case NETWORK_COINTOSS:
-//        {
-//            // coin toss to determine roles of the two players
-//            int coinToss = pIntData[2];
-//            // if other player's coin is higher than ours then that player is the server
-//            if(coinToss > gameUniqueID) {
-//                self.peerStatus = kClient;
-//            }
-//            
-//            // notify user of tank color
-//            self.gameLabel.text = (self.peerStatus == kServer) ? kBlueLabel : kRedLabel; // server is the blue tank, client is red
-//            self.gameLabel.hidden = NO;
-//            // after 1 second fire method to hide the label
-//            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(hideGameLabel:) userInfo:nil repeats:NO];
-//        }
-//			break;
-//		case NETWORK_MOVE_EVENT:
-//        {
-//            // received move event from other player, update other player's position/destination info
-//            tankInfo *ts = (tankInfo *)&incomingPacket[8];
-//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
-//            tankInfo *ds = &tankStats[peer];
-//            ds->tankDestination = ts->tankDestination;
-//            ds->tankDirection = ts->tankDirection;
-//        }
-//			break;
-//		case NETWORK_FIRE_EVENT:
-//        {
-//            // received a missile fire event from other player, update other player's firing status
-//            tankInfo *ts = (tankInfo *)&incomingPacket[8];
-//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
-//            tankInfo *ds = &tankStats[peer];
-//            ds->tankMissile = ts->tankMissile;
-//            ds->tankMissilePosition = ts->tankMissilePosition;
-//            ds->tankMissileDirection = ts->tankMissileDirection;
-//        }
-//			break;
-//		case NETWORK_HEARTBEAT:
-//        {
-//            // Received heartbeat data with other player's position, destination, and firing status.
-//            
-//            // update the other player's info from the heartbeat
-//            tankInfo *ts = (tankInfo *)&incomingPacket[8];		// tank data as seen on other client
-//            int peer = (self.peerStatus == kServer) ? kClient : kServer;
-//            tankInfo *ds = &tankStats[peer];					// same tank, as we see it on this client
-//            memcpy( ds, ts, sizeof(tankInfo) );
-//            
-//            // update heartbeat timestamp
-//            self.lastHeartbeatDate = [NSDate date];
-//            
-//            // if we were trying to reconnect, set the state back to multiplayer as the peer is back
-//            if(self.gameState == kStateMultiplayerReconnect) {
-//                if(self.connectionAlert && self.connectionAlert.visible) {
-//                    [self.connectionAlert dismissWithClickedButtonIndex:-1 animated:YES];
-//                }
-//                self.gameState = kStateMultiplayer;
-//            }
-//        }
-//			break;
-//		default:
-//			// error
-//			break;
-//	}
+    //	static int lastPacketTime = -1;
+    //	unsigned char *incomingPacket = (unsigned char *)[data bytes];
+    //	int *pIntData = (int *)&incomingPacket[0];
+    //	//
+    //	// developer  check the network time and make sure packers are in order
+    //	//
+    //	int packetTime = pIntData[0];
+    //	int packetID = pIntData[1];
+    //	if(packetTime < lastPacketTime && packetID != NETWORK_COINTOSS) {
+    //		return;	
+    //	}
+    //	
+    //	lastPacketTime = packetTime;
+    //	switch( packetID ) {
+    //		case NETWORK_COINTOSS:
+    //        {
+    //            // coin toss to determine roles of the two players
+    //            int coinToss = pIntData[2];
+    //            // if other player's coin is higher than ours then that player is the server
+    //            if(coinToss > gameUniqueID) {
+    //                self.peerStatus = kClient;
+    //            }
+    //            
+    //            // notify user of tank color
+    //            self.gameLabel.text = (self.peerStatus == kServer) ? kBlueLabel : kRedLabel; // server is the blue tank, client is red
+    //            self.gameLabel.hidden = NO;
+    //            // after 1 second fire method to hide the label
+    //            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(hideGameLabel:) userInfo:nil repeats:NO];
+    //        }
+    //			break;
+    //		case NETWORK_MOVE_EVENT:
+    //        {
+    //            // received move event from other player, update other player's position/destination info
+    //            tankInfo *ts = (tankInfo *)&incomingPacket[8];
+    //            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+    //            tankInfo *ds = &tankStats[peer];
+    //            ds->tankDestination = ts->tankDestination;
+    //            ds->tankDirection = ts->tankDirection;
+    //        }
+    //			break;
+    //		case NETWORK_FIRE_EVENT:
+    //        {
+    //            // received a missile fire event from other player, update other player's firing status
+    //            tankInfo *ts = (tankInfo *)&incomingPacket[8];
+    //            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+    //            tankInfo *ds = &tankStats[peer];
+    //            ds->tankMissile = ts->tankMissile;
+    //            ds->tankMissilePosition = ts->tankMissilePosition;
+    //            ds->tankMissileDirection = ts->tankMissileDirection;
+    //        }
+    //			break;
+    //		case NETWORK_HEARTBEAT:
+    //        {
+    //            // Received heartbeat data with other player's position, destination, and firing status.
+    //            
+    //            // update the other player's info from the heartbeat
+    //            tankInfo *ts = (tankInfo *)&incomingPacket[8];		// tank data as seen on other client
+    //            int peer = (self.peerStatus == kServer) ? kClient : kServer;
+    //            tankInfo *ds = &tankStats[peer];					// same tank, as we see it on this client
+    //            memcpy( ds, ts, sizeof(tankInfo) );
+    //            
+    //            // update heartbeat timestamp
+    //            self.lastHeartbeatDate = [NSDate date];
+    //            
+    //            // if we were trying to reconnect, set the state back to multiplayer as the peer is back
+    //            if(self.gameState == kStateMultiplayerReconnect) {
+    //                if(self.connectionAlert && self.connectionAlert.visible) {
+    //                    [self.connectionAlert dismissWithClickedButtonIndex:-1 animated:YES];
+    //                }
+    //                self.gameState = kStateMultiplayer;
+    //            }
+    //        }
+    //			break;
+    //		default:
+    //			// error
+    //			break;
+    //	}
 }
 
 - (void)sendNetworkPacket:(GKSession *)session packetID:(int)packetID withData:(void *)data ofLength:(int)length reliable:(BOOL)howtosend 
 {
-//	// the packet we'll send is resued
-//	static unsigned char networkPacket[kMaxTankPacketSize];
-//	const unsigned int packetHeaderSize = 2 * sizeof(int); // we have two "ints" for our header
-//	
-//	if(length < (kMaxTankPacketSize - packetHeaderSize)) { // our networkPacket buffer size minus the size of the header info
-//		int *pIntData = (int *)&networkPacket[0];
-//		// header info
-//		pIntData[0] = gamePacketNumber++;
-//		pIntData[1] = packetID;
-//		// copy data in after the header
-//		memcpy( &networkPacket[packetHeaderSize], data, length ); 
-//		
-//		NSData *packet = [NSData dataWithBytes: networkPacket length: (length+8)];
-//		if(howtosend == YES) { 
-//			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataReliable error:nil];
-//		} else {
-//			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataUnreliable error:nil];
-//		}
-//	}
+    //	// the packet we'll send is resued
+    //	static unsigned char networkPacket[kMaxTankPacketSize];
+    //	const unsigned int packetHeaderSize = 2 * sizeof(int); // we have two "ints" for our header
+    //	
+    //	if(length < (kMaxTankPacketSize - packetHeaderSize)) { // our networkPacket buffer size minus the size of the header info
+    //		int *pIntData = (int *)&networkPacket[0];
+    //		// header info
+    //		pIntData[0] = gamePacketNumber++;
+    //		pIntData[1] = packetID;
+    //		// copy data in after the header
+    //		memcpy( &networkPacket[packetHeaderSize], data, length ); 
+    //		
+    //		NSData *packet = [NSData dataWithBytes: networkPacket length: (length+8)];
+    //		if(howtosend == YES) { 
+    //			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataReliable error:nil];
+    //		} else {
+    //			[session sendData:packet toPeers:[NSArray arrayWithObject:gamePeerId] withDataMode:GKSendDataUnreliable error:nil];
+    //		}
+    //	}
 }
 
 
@@ -290,28 +310,28 @@
 // we've gotten a state change in the session
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state 
 { 
-//	if(gameKitState == kStatePicker) {
-//		return;				// only do stuff if we're in multiplayer, otherwise it is probably for Picker
-//	}
-//	
-//	if(state == GKPeerStateDisconnected) {
-//		// We've been disconnected from the other peer.
-//		
-//		// Update user alert or throw alert if it isn't already up
-//		NSString *message = [NSString stringWithFormat:@"Could not reconnect with %@.", [session displayNameForPeer:peerID]];
-//		if((self.gameState == kStateMultiplayerReconnect) && self.connectionAlert && self.connectionAlert.visible) {
-//			self.connectionAlert.message = message;
-//		}
-//		else {
-//			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lost Connection" message:message delegate:self cancelButtonTitle:@"End Game" otherButtonTitles:nil];
-//			self.connectionAlert = alert;
-//			[alert show];
-//			[alert release];
-//		}
-//		
-//		// go back to start mode
-//		self.gameState = kStateStartGame; 
-//	} 
+    //	if(gameKitState == kStatePicker) {
+    //		return;				// only do stuff if we're in multiplayer, otherwise it is probably for Picker
+    //	}
+    //	
+    //	if(state == GKPeerStateDisconnected) {
+    //		// We've been disconnected from the other peer.
+    //		
+    //		// Update user alert or throw alert if it isn't already up
+    //		NSString *message = [NSString stringWithFormat:@"Could not reconnect with %@.", [session displayNameForPeer:peerID]];
+    //		if((self.gameState == kStateMultiplayerReconnect) && self.connectionAlert && self.connectionAlert.visible) {
+    //			self.connectionAlert.message = message;
+    //		}
+    //		else {
+    //			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Lost Connection" message:message delegate:self cancelButtonTitle:@"End Game" otherButtonTitles:nil];
+    //			self.connectionAlert = alert;
+    //			[alert show];
+    //			[alert release];
+    //		}
+    //		
+    //		// go back to start mode
+    //		self.gameState = kStateStartGame; 
+    //	} 
 } 
 
 
@@ -322,6 +342,8 @@
     [accelerometer release];
     [whichHand release];
     [serverAddress release];
+    [remoteDisplayText release];
+    [localDisplayText release];
     [socket release];
     [locationManager stopUpdatingHeading];
     [locationManager release];

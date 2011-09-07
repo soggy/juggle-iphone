@@ -4,6 +4,8 @@
 <dict>
 	<key>get-task-allow</key>
 	<true/>
+	<key>application-identifier</key>
+	<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
 	<key>keychain-access-groups</key>
 	<array/>
 </dict>

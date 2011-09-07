@@ -17,15 +17,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] retain];
     // Override point for customization after application launch.
+    
+    // Start by displaying splash screen
+    UIViewController *splashController;
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        splashController = [[ViewController alloc] initWithNibName:@"SplashViewController_iPhone" bundle:nil];
+    } else {
+        splashController = [[ViewController alloc] initWithNibName:@"SplashViewController_iPad" bundle:nil];
+    }
+    self.window.rootViewController = splashController;
+    [self.window makeKeyAndVisible];
+    
+    // Use animation to cut to the main view. Let it handle all the timing...
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil] retain];
     } else {
         self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil] retain];
     }
     self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1.5];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.viewController.view cache:NO];
+    
+    [self.window addSubview:self.viewController.view];
+    [self.window bringSubviewToFront:self.viewController.view];
+    
+    [splashController.view removeFromSuperview];
+    [UIView commitAnimations];
+    
     return YES;
 }
 

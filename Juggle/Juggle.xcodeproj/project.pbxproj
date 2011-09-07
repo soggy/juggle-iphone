@@ -12,6 +12,9 @@
 		DD07D67214141DB400CEFD10 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */; };
 		DD07D67B141445BB00CEFD10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD07D67A141445BB00CEFD10 /* CoreLocation.framework */; };
 		DD1F3C471413E91A0039A528 /* Entitlements.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = DD1F3C461413E91A0039A528 /* Entitlements.entitlements */; };
+		DD2CC0F3141829F1009BD03E /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2CC0F2141829F1009BD03E /* SplashViewController.m */; };
+		DD2CC0F714182A01009BD03E /* SplashViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2CC0F514182A01009BD03E /* SplashViewController_iPad.xib */; };
+		DD2CC0F814182A01009BD03E /* SplashViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD2CC0F614182A01009BD03E /* SplashViewController_iPhone.xib */; };
 		DD3ACE7E1412D9480097BAF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7D1412D9480097BAF8 /* UIKit.framework */; };
 		DD3ACE801412D9480097BAF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE7F1412D9480097BAF8 /* Foundation.framework */; };
 		DD3ACE821412D9480097BAF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3ACE811412D9480097BAF8 /* CoreGraphics.framework */; };
@@ -37,9 +40,12 @@
 		DD071D691412F36D00247C08 /* TattleTale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TattleTale.h; sourceTree = "<group>"; };
 		DD071D6A1412F36D00247C08 /* TattleTale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TattleTale.m; sourceTree = "<group>"; };
 		DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		DD07D6741414279400CEFD10 /* Juggle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Juggle.entitlements; sourceTree = "<group>"; };
 		DD07D67A141445BB00CEFD10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		DD1F3C461413E91A0039A528 /* Entitlements.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		DD2CC0F1141829F1009BD03E /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		DD2CC0F2141829F1009BD03E /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		DD2CC0F514182A01009BD03E /* SplashViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController_iPad.xib; sourceTree = "<group>"; };
+		DD2CC0F614182A01009BD03E /* SplashViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController_iPhone.xib; sourceTree = "<group>"; };
 		DD3ACE791412D9480097BAF8 /* Juggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3ACE7D1412D9480097BAF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DD3ACE7F1412D9480097BAF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -118,9 +124,10 @@
 				DDF1630D141478B700D9C5C6 /* default.png */,
 				DDF1630E141478B700D9C5C6 /* default@2x.png */,
 				DD480D981414874C0063A54C /* Default-Portrait~ipad.png */,
-				DD07D6741414279400CEFD10 /* Juggle.entitlements */,
 				DD3ACE8C1412D9480097BAF8 /* AppDelegate.h */,
 				DD3ACE8D1412D9480097BAF8 /* AppDelegate.m */,
+				DD2CC0F1141829F1009BD03E /* SplashViewController.h */,
+				DD2CC0F2141829F1009BD03E /* SplashViewController.m */,
 				DD3ACE8F1412D9480097BAF8 /* ViewController.h */,
 				DD3ACE901412D9480097BAF8 /* ViewController.m */,
 				DD071D691412F36D00247C08 /* TattleTale.h */,
@@ -129,6 +136,8 @@
 				DD071D661412EFD000247C08 /* AsyncUdpSocket.m */,
 				DD07D67114141DB400CEFD10 /* MainWindow_iPhone.xib */,
 				DD480D94141483E00063A54C /* MainWindow_iPad.xib */,
+				DD2CC0F514182A01009BD03E /* SplashViewController_iPad.xib */,
+				DD2CC0F614182A01009BD03E /* SplashViewController_iPhone.xib */,
 				DD3ACE921412D9480097BAF8 /* ViewController_iPhone.xib */,
 				DD3ACE951412D9480097BAF8 /* ViewController_iPad.xib */,
 				DD3ACE841412D9480097BAF8 /* Supporting Files */,
@@ -211,6 +220,8 @@
 				DD480D93141483B50063A54C /* Icon-72.png in Resources */,
 				DD480D95141483E00063A54C /* MainWindow_iPad.xib in Resources */,
 				DD480D991414874D0063A54C /* Default-Portrait~ipad.png in Resources */,
+				DD2CC0F714182A01009BD03E /* SplashViewController_iPad.xib in Resources */,
+				DD2CC0F814182A01009BD03E /* SplashViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +237,7 @@
 				DD3ACE911412D9480097BAF8 /* ViewController.m in Sources */,
 				DD071D671412EFD000247C08 /* AsyncUdpSocket.m in Sources */,
 				DD071D6B1412F36D00247C08 /* TattleTale.m in Sources */,
+				DD2CC0F3141829F1009BD03E /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
