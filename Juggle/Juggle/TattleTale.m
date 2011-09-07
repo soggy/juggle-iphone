@@ -105,7 +105,7 @@
     NSString *jsonData = [NSString stringWithFormat:jsonDataFormat, whichHand, acceleration.x, acceleration.y, acceleration.z, lastOrientationX, lastOrientationY, lastOrientationZ];
     
     if (localDisplayText != nil)
-        localDisplayText.text = [NSString stringWithFormat:@"Accel - X:%4.2f Y:4.2f Z:4.2f\nAzi:%4.2f Pitch:%4.2f Roll:%4.2f", acceleration.x, acceleration.y, acceleration.z, lastOrientationX, lastOrientationY, lastOrientationZ];
+        localDisplayText.text = [NSString stringWithFormat:@"Accel  X:%-4.2f Y:%-4.2f Z:%-4.2f\nOrien  X:%-4.2f Y:%-4.2f Z:%-4.2f", acceleration.x, acceleration.y, acceleration.z, lastOrientationX, lastOrientationY, lastOrientationZ];
     [socket sendData:[jsonData dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] toHost:serverAddress port:12345 withTimeout:-1 tag:1];
 }
 
