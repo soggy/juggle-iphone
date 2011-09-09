@@ -40,7 +40,7 @@
     self.window.rootViewController = self.viewController;
     
     [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:1.5];
+    [UIView setAnimationDuration:2.5];
     [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.viewController.view cache:NO];
     
     [self.window addSubview:self.viewController.view];
